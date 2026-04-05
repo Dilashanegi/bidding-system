@@ -28,6 +28,10 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 // Yeh sab bina login ke chalenge
                 .requestMatchers(
+                    "/",
+                    "/**",
+                    "/index.html",
+                    "/static/**",
                     "/api/user/login",
                     "/api/user/register",
                     "/api/user/wallet/add",
